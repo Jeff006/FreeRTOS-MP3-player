@@ -3,44 +3,41 @@
 #include "task.h"
 #include "timers.h"
 #include "semphr.h"
+#include "print.h"
 
 /* ST Std Lib includes. */
 #include "stm32f4xx.h"
 #include "stm32f4xx_conf.h"
+#include "stm32f4_discovery.h"
+#include "stm32f4_discovery_lcd.h"
 
 #define mainFLASH_TASK_PRIORITY					( tskIDLE_PRIORITY + 1UL )
-
-#define LED_GPIO								GPIOD
-#define LED_CLK									RCC_AHB1Periph_GPIOD
-#define ledSTACK_SIZE 							configMINIMAL_STACK_SIZE
-
-typedef enum
-{
-	LED_GREEN_Pin = GPIO_Pin_12,
-	LED_ORANGE_Pin = GPIO_Pin_13,
-	LED_RED_Pin = GPIO_Pin_14,
-	LED_BLUE_Pin = GPIO_Pin_15
-} LED_COLOR;
+#define LED_STACK_SIZE 							configMINIMAL_STACK_SIZE
 
 /* Structure used to pass parameters to the LED tasks. */
 typedef struct LED_PARAMETERS
 {
-	LED_COLOR Color;		/*< The output the task should use. */
+	Led_TypeDef Led;		/*< The output the task should use. */
 	TickType_t xFlashRate;	/*< The rate at which the LED should flash. */
 } xLEDParameters;
 
-void LED_Init(void);
-void LEDToggle(LED_COLOR Color);
-void vParTestToggleLED(LED_COLOR Color);
+void vToggleLED(Led_TypeDef Led);
 static void vLEDFlashTask( void *pvParameters );
 void vStartLEDFlashTasks( unsigned portBASE_TYPE uxPriority );
+
+/* String to print if USE_STDIO is defined. */
+const char * const pcTaskStartMsg = "LED flash task started.\r\n";
 
 
 int main(void)
 {
 	SystemInit();
-	LED_Init();
+	STM_EVAL_LEDInit(LED3);
+	STM_EVAL_LEDInit(LED4);
+	STM_EVAL_LEDInit(LED5);
+	STM_EVAL_LEDInit(LED6);
 
+	vPrintInitialise();
 	vStartLEDFlashTasks( mainFLASH_TASK_PRIORITY );
 
 	/* Start the scheduler. */
@@ -56,45 +53,20 @@ void vStartLEDFlashTasks( unsigned portBASE_TYPE uxPriority )
 {
 	xLEDParameters *pxLEDParameters;
 	const TickType_t xFlashRate = 125;
+	uint32_t i;
 
-
-	/* Create and complete the structure used to pass parameters to the next
-		created task. */
-	pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
-	pxLEDParameters->Color = LED_GREEN_Pin;
-	pxLEDParameters->xFlashRate = ( xFlashRate + ( xFlashRate * ( TickType_t ) 1 ) );
-	pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
-
-	/* Spawn the task. */
-	xTaskCreate( vLEDFlashTask, "LEDx", ledSTACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
-
-	/* Create and complete the structure used to pass parameters to the next
-	created task. */
-	pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
-	pxLEDParameters->Color = LED_ORANGE_Pin;
-	pxLEDParameters->xFlashRate = ( xFlashRate + ( xFlashRate * ( TickType_t ) 2 ) );
-	pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
-
-	xTaskCreate( vLEDFlashTask, "LEDx", ledSTACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
-
-	/* Create and complete the structure used to pass parameters to the next
-		created task. */
-	pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
-	pxLEDParameters->Color = LED_BLUE_Pin;
-	pxLEDParameters->xFlashRate = ( xFlashRate + ( xFlashRate * ( TickType_t ) 3 ) );
-	pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
-
-	xTaskCreate( vLEDFlashTask, "LEDx", ledSTACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
-
-	/* Create and complete the structure used to pass parameters to the next
+	for(i=0;i<4;i++)
+	{
+		/* Create and complete the structure used to pass parameters to the next
 			created task. */
-	pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
-	pxLEDParameters->Color = LED_RED_Pin;
-	pxLEDParameters->xFlashRate = ( xFlashRate + ( xFlashRate * ( TickType_t ) 4 ) );
-	pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
+		pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
+		pxLEDParameters->Led = i;
+		pxLEDParameters->xFlashRate = ( xFlashRate + ( xFlashRate * ( TickType_t ) i ) );
+		pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
 
-	xTaskCreate( vLEDFlashTask, "LEDx", ledSTACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
-
+		/* Spawn the task. */
+		xTaskCreate( vLEDFlashTask, "LED3", LED_STACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
+	}
 }
 
 /*-----------------------------------------------------------*/
@@ -104,7 +76,7 @@ static void vLEDFlashTask( void *pvParameters )
 	xLEDParameters *pxParameters;
 
 	/* Queue a message for printing to say the task has started. */
-	//vPrintDisplayMessage( &pcTaskStartMsg );
+	vPrintDisplayMessage( &pcTaskStartMsg );
 
 	pxParameters = ( xLEDParameters * ) pvParameters;
 
@@ -112,47 +84,24 @@ static void vLEDFlashTask( void *pvParameters )
 	{
 		/* Delay for half the flash period then turn the LED on. */
 		vTaskDelay( pxParameters->xFlashRate / ( TickType_t ) 2 );
-		vParTestToggleLED( pxParameters->Color );
+		vToggleLED( pxParameters->Led );
 
 		/* Delay for half the flash period then turn the LED off. */
 		vTaskDelay( pxParameters->xFlashRate / ( TickType_t ) 2 );
-		vParTestToggleLED( pxParameters->Color );
+		vToggleLED( pxParameters->Led );
 	}
 }
 
 /*-----------------------------------------------------------*/
 
-void vParTestToggleLED(LED_COLOR Color)
+void vToggleLED(Led_TypeDef Led)
 {
 	taskENTER_CRITICAL();
 	{
-		LEDToggle(Color);
+		STM_EVAL_LEDToggle(Led);
 	}
 	taskEXIT_CRITICAL();
 
-}
-
-/*-----------------------------------------------------------*/
-
-void LEDToggle(LED_COLOR Color)
-{
-	LED_GPIO->ODR ^= Color;
-}
-
-/*-----------------------------------------------------------*/
-
-void LED_Init(void)
-{
-	GPIO_InitTypeDef GPIO_InitStructure;
-
-	RCC_AHB1PeriphClockCmd(LED_CLK, ENABLE);
-
-	GPIO_InitStructure.GPIO_Pin = LED_GREEN_Pin | LED_ORANGE_Pin | LED_RED_Pin | LED_BLUE_Pin;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(LED_GPIO, &GPIO_InitStructure);
 }
 
 /*-----------------------------------------------------------*/
