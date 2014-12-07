@@ -13,6 +13,7 @@
 
 #define mainFLASH_TASK_PRIORITY					( tskIDLE_PRIORITY + 1UL )
 #define LED_STACK_SIZE 							configMINIMAL_STACK_SIZE
+#define LCD_STACK_SIZE 							configMINIMAL_STACK_SIZE
 
 /* Structure used to pass parameters to the LED tasks. */
 typedef struct LED_PARAMETERS
@@ -24,20 +25,25 @@ typedef struct LED_PARAMETERS
 void vToggleLED(Led_TypeDef Led);
 static void vLEDFlashTask( void *pvParameters );
 void vStartLEDFlashTasks( unsigned portBASE_TYPE uxPriority );
+void vStartLCDPrintTasks( unsigned portBASE_TYPE uxPriority );
+static void vLCDPrintTask( void *pvParameters );
+void vPrintLCD(const char *Message);
 
 /* String to print if USE_STDIO is defined. */
-const char * const pcTaskStartMsg = "LED flash task started.\r\n";
+const char * const pcTaskStartMsg = "LED flash task started.";
 
 
 int main(void)
 {
 	SystemInit();
-	STM_EVAL_LEDInit(LED3);
+
 	STM_EVAL_LEDInit(LED4);
-	STM_EVAL_LEDInit(LED5);
-	STM_EVAL_LEDInit(LED6);
+
+	STM32f4_Discovery_LCD_Init();
+	LCD_DisplayStringLine(LINE(1), (uint8_t *)"FreeRTOS Initialization.");
 
 	vPrintInitialise();
+	vStartLCDPrintTasks( mainFLASH_TASK_PRIORITY );
 	vStartLEDFlashTasks( mainFLASH_TASK_PRIORITY );
 
 	/* Start the scheduler. */
@@ -49,24 +55,56 @@ int main(void)
 
 /*-----------------------------------------------------------*/
 
+void vStartLCDPrintTasks( unsigned portBASE_TYPE uxPriority )
+{
+	/* Spawn the task. */
+	xTaskCreate( vLCDPrintTask, "LCDPrint", LCD_STACK_SIZE, ( void * ) NULL, uxPriority, ( TaskHandle_t * ) NULL );
+
+}
+
+/*-----------------------------------------------------------*/
+
+static void vLCDPrintTask( void *pvParameters )
+{
+	const char *Message;
+
+	Message = pcPrintGetNextMessage( (TickType_t) 125 );
+
+	for(;;)
+	{
+		vPrintLCD(Message);
+	}
+}
+
+/*-----------------------------------------------------------*/
+
+void vPrintLCD(const char *Message)
+{
+	taskENTER_CRITICAL();
+	{
+		LCD_DisplayStringLine(LINE(2), (uint8_t *)Message);
+	}
+	taskEXIT_CRITICAL();
+
+}
+/*-----------------------------------------------------------*/
+
+
 void vStartLEDFlashTasks( unsigned portBASE_TYPE uxPriority )
 {
 	xLEDParameters *pxLEDParameters;
 	const TickType_t xFlashRate = 125;
-	uint32_t i;
 
-	for(i=0;i<4;i++)
-	{
-		/* Create and complete the structure used to pass parameters to the next
+	/* Create and complete the structure used to pass parameters to the next
 			created task. */
-		pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
-		pxLEDParameters->Led = i;
-		pxLEDParameters->xFlashRate = ( xFlashRate + ( xFlashRate * ( TickType_t ) i ) );
-		pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
+	pxLEDParameters = ( xLEDParameters * ) pvPortMalloc( sizeof( xLEDParameters ) );
+	pxLEDParameters->Led = LED4;
+	pxLEDParameters->xFlashRate = xFlashRate;
+	pxLEDParameters->xFlashRate /= portTICK_PERIOD_MS;
 
-		/* Spawn the task. */
-		xTaskCreate( vLEDFlashTask, "LED3", LED_STACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
-	}
+	/* Spawn the task. */
+	xTaskCreate( vLEDFlashTask, "LED3", LED_STACK_SIZE, ( void * ) pxLEDParameters, uxPriority, ( TaskHandle_t * ) NULL );
+
 }
 
 /*-----------------------------------------------------------*/

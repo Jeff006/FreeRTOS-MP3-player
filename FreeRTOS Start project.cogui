@@ -23,13 +23,17 @@
 <part id="10"/>
 <part id="11"/>
 <part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/main.c" title="main.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/main.c" title="main.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="938" selectionTopPixel="250"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1142" selectionTopPixel="542"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="task.h" partName="task.h" path="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/include/task.h" title="task.h" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/include/task.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/FreeRTOS/include/task.h"/>
@@ -61,15 +65,15 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery.h" partName="stm32f4_discovery.h" path="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery.h" title="stm32f4_discovery.h" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="3199" selectionTopPixel="1106"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="3148" selectionTopPixel="1207"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery.c" partName="stm32f4_discovery.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery.c" title="stm32f4_discovery.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="5517" selectionTopPixel="2516"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="3341" selectionTopPixel="1292"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="print.c" partName="print.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/print.c" title="print.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/print.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="print.c" partName="print.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/print.c" title="print.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/print.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/FreeRTOS/print.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5786" selectionTopPixel="1811"/>
+<editorState selectionHorizontalPixel="0" selectionLength="46" selectionOffset="5719" selectionTopPixel="1811"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="print.h" partName="print.h" path="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/include/print.h" title="print.h" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/include/print.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/FreeRTOS/include/print.h"/>
@@ -77,7 +81,23 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="tasks.c" partName="tasks.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/tasks.c" title="tasks.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/tasks.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/FreeRTOS/tasks.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="95899" selectionTopPixel="30071"/>
+<editorState selectionHorizontalPixel="32" selectionLength="0" selectionOffset="95899" selectionTopPixel="48365"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.h" partName="stm32f4_discovery_lcd.h" path="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery_lcd.h" title="stm32f4_discovery_lcd.h" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery_lcd.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="8991" selectionTopPixel="4148"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.c" partName="stm32f4_discovery_lcd.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery_lcd.c" title="stm32f4_discovery_lcd.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/stm32f4_discovery_lcd.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="23369" selectionTopPixel="12110"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="fonts.c" partName="fonts.c" path="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/fonts.c" title="fonts.c" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/stm32f4_discovery/fonts.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/stm32f4_discovery/fonts.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="46853" selectionTopPixel="15674"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="queue.h" partName="queue.h" path="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/include/queue.h" title="queue.h" tooltip="F:/Jeff/Dev/FreeRTOS MP3 player/FreeRTOS/Source/include/queue.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FreeRTOS Start project/FreeRTOS/include/queue.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="27636" selectionTopPixel="13532"/>
 </editor>
 </editors>
 <views>
@@ -85,26 +105,23 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/FreeRTOS Start project"/>
-<element path="/FreeRTOS Start project/FreeRTOS"/>
-<element path="/FreeRTOS Start project/FreeRTOS/include"/>
 <element path="/FreeRTOS Start project/stm32f4_discovery"/>
 </expanded>
 <selection>
-<element path="/FreeRTOS Start project/FreeRTOS/include/print.h"/>
+<element path="/FreeRTOS Start project/main.c"/>
 </selection>
 </viewState>
 </view>
 <view id="org.coocox.component.ui.ComponentView" partName="Components">
 <viewState/>
 </view>
+<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
+<viewState/>
+</view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 </viewState>
-</view>
-<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
-<viewState/>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
@@ -254,8 +271,8 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
@@ -282,7 +299,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4cb591" ratio="0.6992561" ratioLeft="658" ratioRight="283" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1ad2ff9">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
@@ -326,164 +343,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/print.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/print.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOSConfig.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/include/print.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/tasks.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/queue.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/tasks.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/stm32f4_discovery/fonts.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/FreeRTOS Start project/FreeRTOS/include/task.h"/>
 </editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="955" y="16"/>
+<item historyLabel="stm32f4_discovery.c" index="2">
+<position info="not_deleted" x="5517" y="16"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1030" y="0"/>
+<item historyLabel="stm32f4_discovery.c" index="2">
+<position info="not_deleted" x="5755" y="8"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position/>
+<item historyLabel="stm32f4_discovery.c" index="2">
+<position info="not_deleted" x="3323" y="8"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="stm32f4_discovery.h" index="1">
-<position info="not_deleted" x="9753" y="18"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="353" y="14"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="938" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="834" y="4"/>
-</item>
-<item historyLabel="stm32f4_discovery.h" index="1">
-<position info="not_deleted" x="3161" y="4"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="972" y="4"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="938" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1653" y="3"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="497" y="11"/>
-</item>
-<item historyLabel="stm32f4_discovery.h" index="1">
+<item historyLabel="stm32f4_discovery.h" index="5">
 <position info="not_deleted" x="3199" y="11"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1447" y="0"/>
+<item historyLabel="stm32f4_discovery.h" index="5">
+<position info="not_deleted" x="3708" y="8"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="938" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1199" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2286" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="3660" y="11"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2179" y="43"/>
+<item historyLabel="stm32f4_discovery.h" index="5">
+<position info="not_deleted" x="3148" y="4"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="123" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2755" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2180" y="20"/>
+<item historyLabel="main.c" index="4">
+<position/>
 </item>
-<item historyLabel="print.c" index="2">
-<position info="not_deleted" x="5401" y="20"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1189" y="26"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2109" y="0"/>
+<item historyLabel="stm32f4_discovery_lcd.c" index="3">
+<position info="not_deleted" x="17180" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1200" y="0"/>
+<item historyLabel="main.c" index="4">
+<position/>
 </item>
-<item historyLabel="print.c" index="2">
-<position info="not_deleted" x="5401" y="20"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1189" y="26"/>
 </item>
-<item historyLabel="FreeRTOSConfig.h" index="3">
-<position info="not_deleted" x="4819" y="0"/>
+<item historyLabel="stm32f4_discovery_lcd.c" index="3">
+<position info="not_deleted" x="17336" y="7"/>
 </item>
-<item historyLabel="print.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="stm32f4_discovery_lcd.h" index="1">
+<position info="not_deleted" x="8991" y="9"/>
 </item>
-<item historyLabel="print.c" index="2">
-<position info="not_deleted" x="5475" y="9"/>
+<item historyLabel="fonts.c" index="6">
+<position info="not_deleted" x="46853" y="7"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="401" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1189" y="26"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="938" y="0"/>
+<item historyLabel="stm32f4_discovery_lcd.c" index="3">
+<position info="not_deleted" x="17343" y="0"/>
 </item>
-<item historyLabel="tasks.c" index="5">
-<position info="not_deleted" x="95678" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1142" y="0"/>
 </item>
-<item historyLabel="print.c" index="2">
-<position info="not_deleted" x="5594" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1368" y="19"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="401" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1296" y="16"/>
 </item>
-<item historyLabel="print.c" index="2">
-<position info="not_deleted" x="4985" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="938" y="0"/>
-</item>
-<item historyLabel="queue.c" index="6">
-<position info="not_deleted" x="22473" y="0"/>
-</item>
-<item historyLabel="print.c" index="2">
-<position info="not_deleted" x="4985" y="0"/>
-</item>
-<item historyLabel="queue.c" index="6">
-<position info="not_deleted" x="22474" y="12"/>
-</item>
-<item historyLabel="FreeRTOSConfig.h" index="3">
-<position info="not_deleted" x="7409" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1080" y="0"/>
-</item>
-<item historyLabel="print.c" index="2">
+<item historyLabel="print.c" index="0">
 <position info="not_deleted" x="5098" y="16"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1080" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1296" y="16"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="938" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1368" y="19"/>
 </item>
-<item historyLabel="tasks.c" index="7">
-<position info="not_deleted" x="95899" y="0"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2315" y="19"/>
 </item>
-<item active="true" historyLabel="print.c" index="2">
-<position info="not_deleted" x="5098" y="16"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1692" y="14"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="353" y="14"/>
+</item>
+<item historyLabel="task.h" index="7">
+<position info="not_deleted" x="8801" y="18"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1924" y="0"/>
+</item>
+<item historyLabel="print.c" index="0">
+<position info="not_deleted" x="5719" y="46"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1924" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2008" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1916" y="55"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1898" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1987" y="23"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2198" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2156" y="21"/>
+</item>
+<item historyLabel="stm32f4_discovery_lcd.c" index="3">
+<position info="not_deleted" x="24322" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2156" y="21"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1987" y="23"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="2086" y="37"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1446" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1221" y="21"/>
+</item>
+<item historyLabel="stm32f4_discovery_lcd.c" index="3">
+<position info="not_deleted" x="24764" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1937" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1288" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1142" y="0"/>
+</item>
+<item historyLabel="stm32f4_discovery_lcd.c" index="3">
+<position info="not_deleted" x="23369" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="4">
+<position info="not_deleted" x="1142" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -492,6 +509,18 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="queue.h" tooltip="FreeRTOS Start project/FreeRTOS/include/queue.h">
+<persistable path="/FreeRTOS Start project/FreeRTOS/include/queue.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fonts.c" tooltip="FreeRTOS Start project/stm32f4_discovery/fonts.c">
+<persistable path="/FreeRTOS Start project/stm32f4_discovery/fonts.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.c" tooltip="FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.c">
+<persistable path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.h" tooltip="FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.h">
+<persistable path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tasks.c" tooltip="FreeRTOS Start project/FreeRTOS/tasks.c">
 <persistable path="/FreeRTOS Start project/FreeRTOS/tasks.c"/>
 </file>
@@ -510,12 +539,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery.h" tooltip="FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery.h">
 <persistable path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery_lcd.h" tooltip="FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.h">
-<persistable path="/FreeRTOS Start project/stm32f4_discovery/stm32f4_discovery_lcd.h"/>
-</file>
 <file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
-<persistable>
-<subPage/>
+<persistable>&#x0A;<subPage/>
 </persistable>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcd_log_conf.h" tooltip="LCD/lcd_log_conf.h">
@@ -526,15 +551,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="heap_2.c" tooltip="FreeRTOS/FreeRTOS/heap_2.c">
 <persistable path="/FreeRTOS/FreeRTOS/heap_2.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="portable.h" tooltip="FreeRTOS/FreeRTOS/include/portable.h">
-<persistable path="/FreeRTOS/FreeRTOS/include/portable.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="portmacro.h" tooltip="FreeRTOS/FreeRTOS/include/portmacro.h">
-<persistable path="/FreeRTOS/FreeRTOS/include/portmacro.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f30x.c" tooltip="Test/system_stm32f30x.c">
-<persistable path="/Test/system_stm32f30x.c"/>
 </file>
 </mruList>
 </workbench>
